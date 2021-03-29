@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="space_non">0dp</dimen>
+    <dimen name="space_xxs">2dp</dimen>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="space_xxl">40dp</dimen>
+    <dimen name="space_xxxl">48dp</dimen>
+    <dimen name="space_xxxxl">64dp</dimen>
+    <dimen name="space_xxxxxl">72dp</dimen>
+
+</resources>

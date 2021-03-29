@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="colorPrimary">#D0021B</color>
+    <color name="colorPrimaryDark">#72131F</color>
+    <color name="colorAccent">#514F4F</color>
+    <color name="primaryTextColor">#383838</color>
+    <color name="colorActionBar">#302F2C</color>
+
+    <!-- Secondary -->
+    <color name="colorGreyText">#737171</color>
+    <color name="colorGreyEditText">#A8A6A6</color>
+    <color name="lightGrey">#DEDEDE</color>
+    <color name="colorGreen">#7ED321</color>
+    <color name="colorRed">#D0021B</color>
+
+    <!-- Background -->
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGreyBackgroundProfile">#F4F4F4</color>
+    <color name="colorTransparent">#0000</color>
+
+    <!-- Others -->
+    <color name="colorMainPage">#F4F5F4</color>
+    <color name="textBlack">#181818</color>
+    <color name="dividerGrey">#DEDEDE</color>
+    <color name="whiteText">#FBFBFA</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorDarkGrey">#de292828</color>
+    <color name="softPink">#EBEBEB</color>
+
+    <color name="colorDisable">#D0D0D0</color>
+    <color name="colorRipple">#40ffffff</color>
+    <color name="colorBackground">#F2F2F2</color>
+
+    <color name="defaultGradientStart">#3B3A3A</color>
+    <color name="defaultGradientEnd">#050505</color>
+    <color name="tab_text_color">#de292828</color>
+    <color name="dark_text_color">#de292828</color>
+
+    <color name="blue_small">#95D3F3</color>
+    <color name="blue_medium">#49AAF6</color>
+    <color name="blue_large">#1E84D5</color>
+    <color name="blue_xlarge">#0E6F9B</color>
+
+    <!-- Chart Default -->
+    <color name="chart_default">#CBCACA</color>
+    <color name="chart_selected">#FCB000</color>
+
+    <color name="dynamic_payment_component_color">#FF6E41</color>
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "887442377839",
+    "project_id": "cutapp-f84bb",
+    "storage_bucket": "cutapp-f84bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:887442377839:android:09aa3d2c05b94a7cb5119a",
+        "android_client_info": {
+          "package_name": "com.example.htmlparsingwithjsoup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "887442377839-lc6vjk4sq4im3196tf32u9nu7028gs4a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHSJ9F2n-9EuQqEAtrYMwKRZU8O83GDEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "887442377839-lc6vjk4sq4im3196tf32u9nu7028gs4a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

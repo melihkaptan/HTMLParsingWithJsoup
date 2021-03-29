@@ -1,0 +1,2 @@
+rootProject.name='HTML Parsing With Jsoup'
+include ':app'
