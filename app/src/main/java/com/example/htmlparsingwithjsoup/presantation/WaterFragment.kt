@@ -16,7 +16,7 @@ class WaterFragment : BaseFragment(), OnItemClickListener {
 
     lateinit var adapter: ItemListAdapter
     var cutList: ArrayList<Cut> = ArrayList()
-    
+
     override fun getLayoutRes(): Int = R.layout.list_fragment
 
     override fun initView() {
