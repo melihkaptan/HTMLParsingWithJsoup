@@ -1,4 +1,4 @@
-package com.example.htmlparsingwithjsoup
+package com.example.htmlparsingwithjsoup.presantation.viewmodel
 
 import android.annotation.TargetApi
 import android.content.BroadcastReceiver
