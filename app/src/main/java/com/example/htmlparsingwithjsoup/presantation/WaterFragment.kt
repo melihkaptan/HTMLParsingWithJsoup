@@ -1,13 +1,16 @@
 package com.example.htmlparsingwithjsoup.presantation
 
+import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
+import com.example.htmlparsingwithjsoup.NetworkConnectionLiveData
 import com.example.htmlparsingwithjsoup.model.OnItemClickListener
 import com.example.htmlparsingwithjsoup.R
 import com.example.htmlparsingwithjsoup.adapters.ItemListAdapter
 import com.example.htmlparsingwithjsoup.base.BaseFragment
 import com.example.htmlparsingwithjsoup.enums.CutType
 import com.example.htmlparsingwithjsoup.model.Cut
+import com.example.htmlparsingwithjsoup.presantation.viewmodel.CutViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.list_fragment.*
 
@@ -16,13 +19,16 @@ class WaterFragment : BaseFragment(), OnItemClickListener {
 
     lateinit var adapter: ItemListAdapter
     var cutList: ArrayList<Cut> = ArrayList()
+    private var emptyList = ArrayList<Cut>()
 
     override fun getLayoutRes(): Int = R.layout.list_fragment
 
     override fun initView() {
         super.initView()
-        initRecyclerView()
         val viewModel = provideViewModel()
+
+        initRecyclerView()
+        initNetworkObserver(viewModel)
         viewModel.getDocument(CutType.WATER)
 
         viewModel.isLoadingLiveData.observe(this, Observer {
@@ -46,11 +52,13 @@ class WaterFragment : BaseFragment(), OnItemClickListener {
     }
 
     private fun initRecyclerView() {
+
+        adapter = ItemListAdapter(emptyList, this)
+
         recyclerView?.let {
             it.layoutManager =
                 GridLayoutManager(getApplicationContext(), 1, GridLayoutManager.VERTICAL, false)
         }
-        updateRecyclerView(cutList)
     }
 
     private fun updateRecyclerView(items: ArrayList<Cut>) {
@@ -66,6 +74,26 @@ class WaterFragment : BaseFragment(), OnItemClickListener {
         }
     }
 
+    private fun initNetworkObserver(viewModel: CutViewModel) {
+        NetworkConnectionLiveData(context ?: return)
+            .observe(viewLifecycleOwner, Observer { isConnected ->
+                if (isConnected) {
+                    // Internet Available
+                    if (adapter.itemList.isEmpty())
+                        viewModel.getDocument(CutType.WATER)
+                } else {
+                    // Internet Non Available
+                    Toast.makeText(
+                        context,
+                        "  The application can not reach to server at the moment. Network connection is not available.",
+                        Toast.LENGTH_LONG
+                    ).show();
+                    updateRecyclerView(emptyList)
+                }
+                return@Observer
+            })
+
+    }
 
 
 }

@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.list_fragment.*
 
 @AndroidEntryPoint
-class CutDetailActivity : AppCompatActivity() {
+class CutDetailActivity : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var adapter: ItemListAdapter
 
@@ -42,7 +42,7 @@ class CutDetailActivity : AppCompatActivity() {
     }
 
     private fun updateRecyclerView(items: ArrayList<Cut>) {
-        adapter = ItemListAdapter(items ,null)
+        adapter = ItemListAdapter(items, this)
         recyclerView.adapter = adapter
     }
 
@@ -55,5 +55,9 @@ class CutDetailActivity : AppCompatActivity() {
 
             return intent
         }
+    }
+
+    override fun onItemClicked(cut: Cut) {
+        TODO("Not yet implemented")
     }
 }

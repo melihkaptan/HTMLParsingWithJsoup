@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HTML Parsing With Jsoup</string>
+    <string name="fragment_electric_name">Power Cut</string>
+    <string name="fragment_water_name">Water Cut</string>
+</resources>

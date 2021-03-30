@@ -8,7 +8,7 @@ import com.example.htmlparsingwithjsoup.R
 import com.example.htmlparsingwithjsoup.model.Cut
 
 
-class ItemListAdapter(val itemList: ArrayList<Cut>, val itemClickListener: OnItemClickListener?) :
+class ItemListAdapter(val itemList: ArrayList<Cut>, val itemClickListener: OnItemClickListener) :
     RecyclerView.Adapter<ItemListViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemListViewHolder {
         return ItemListViewHolder(
@@ -25,8 +25,7 @@ class ItemListAdapter(val itemList: ArrayList<Cut>, val itemClickListener: OnIte
     }
 
     override fun onBindViewHolder(holder: ItemListViewHolder, position: Int) {
-        if (itemClickListener != null) {
-            holder.bindItems(itemList[position] , itemClickListener)
-        }
+        holder.bindItems(itemList[position] , itemClickListener)
     }
+
 }
