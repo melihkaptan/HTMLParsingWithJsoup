@@ -94,20 +94,7 @@ abstract class BaseFragment : Fragment() {
             blockingPane = null
         }
     }
-
-    fun provideFirebaseToken() {
-        FirebaseMessaging.getInstance().token
-            .addOnCompleteListener(OnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    return@OnCompleteListener
-                }
-                // Get new FCM registration token
-                val token = task.result
-                println("Token : " + token)
-            })
-
-    }
-
+    
     fun evaluateAllData(document: Document): ArrayList<Cut> {
 
         val headers: Elements =
